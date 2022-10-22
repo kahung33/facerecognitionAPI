@@ -11,9 +11,9 @@ const db = knex({
     client: 'pg',
     connection: {
       host : 'postgresql-slippery-76335',
-      user : 'postgres',
-      password : '',
-      database : 'smart-brain'
+      ssl: {
+        rejectUnauthorized: false
+      }
     }
   });
 
